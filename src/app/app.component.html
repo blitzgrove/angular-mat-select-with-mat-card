@@ -1,0 +1,18 @@
+<div style="padding: 20px;">
+  <div style="padding: 0 0 20px 20px">
+    <mat-form-field>
+      <mat-label>Select an option</mat-label>
+      <mat-select name="countryString" [(value)]="selected" placeholder="Country">
+        <mat-option>None</mat-option>
+        <mat-option value="General notifications">General notifications</mat-option>
+        <mat-option value="Unread notifications">Unread notifications</mat-option>
+        <mat-option value="Read notifications">Read notifications</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <ng-container *ngIf="selected">
+    <mat-card>{{ options[selected] }}</mat-card>
+  </ng-container>
+</div>
+
